@@ -1,6 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/monsieur-la-doulaise');
 @import url('https://fonts.cdnfonts.com/css/vivaldi');
-
+@import url('https://fonts.cdnfonts.com/css/edwardian-scr-alt-itc-tt');
 
 * {
 	margin: 0;
@@ -121,7 +121,7 @@ body {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-family: 'Edwardian Script ITC';
+	font-family:  'Edwardian Scr Alt ITC TT', sans-serif;
 }
 
 #title-institute {
@@ -131,6 +131,7 @@ body {
 
 #title-turma {
 	font-size: 35pt;
+        font-family:  'Edwardian Scr Alt ITC TT', sans-serif;
 }
 
 
