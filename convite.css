@@ -1,0 +1,349 @@
+@import url('https://fonts.cdnfonts.com/css/monsieur-la-doulaise');
+@import url('https://fonts.cdnfonts.com/css/vivaldi');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #fff;	
+	font-size: 100%;
+}
+
+
+html {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('black-stacked-stones.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.container {
+	margin: auto;
+	width: 90%;
+	height: 90vh;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+#convite-front, #convite-back {
+	/*margin: 1em auto;*/
+	padding: 2em;
+	width: 95%;
+	height: 95%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	perspective: 700px;
+	transition: 1000ms;
+	box-shadow: 6px 6px 18px #000;
+}
+
+#convite-front {
+	background-image: url('card-back-background.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#convite-back {
+	background-image: url('card-back-background-border.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#convite-front, #convite-back {
+	position: absolute;
+}
+
+#convite-front {
+	z-index: 1;
+}
+
+#convite-back {
+	transform: rotateY(-180deg);
+	backface-visibility: hidden;
+}
+
+.container:hover #convite-front { 
+	transform: rotateY(180deg);
+	z-index: -2;
+}
+
+.container:hover #convite-back { 
+	transform: rotateY(0deg);
+	z-index: 1;
+}
+
+.logo {
+	width: auto;
+}
+
+.logo-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-size: 30pt;
+	height: 35%;
+}
+
+.logo-item {
+	margin: auto 0.5em;
+	width: auto;
+}
+
+.title {
+	background: linear-gradient(90deg,
+	#835713 0%,
+	#b98939 25%,
+	#fed895 50%,
+	#aa8124 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Edwardian Script ITC';
+}
+
+#title-institute {
+	font-size: 10pt;
+	font-family: 'Century';
+}
+
+#title-turma {
+	font-size: 35pt;
+}
+
+
+
+/* ====== Back Card ======== */
+
+/*
+
+#container-back {
+	background-image: url('card-back-background-border.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+*/
+
+#convite-back {
+	padding-right: 15%;
+	padding-left: 15%;
+	
+}
+
+#texto-back {
+	margin: auto;
+	margin-top: 3em;
+	margin-bottom: 1.5em;
+	font-size: 13pt;
+	font-family: 'Vivaldi', sans-serif;
+	text-align: center;
+}
+
+#logo-title-back {
+	margin: auto;
+	margin-top: 0.5em;
+	text-align: center;
+}
+
+#title-solenidade, #title-festa {
+	margin: auto 1em;
+	font-size: 30pt;
+	font-family: 'Vivaldi', sans-serif;
+}
+
+.info {
+	display: flex;
+	flex-direction: row;
+	width: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.column-info {
+	margin: 1em auto;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(90deg,
+	#835713 0%,
+	#b98939 25%,
+	#fed895 50%,
+	#aa8124 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Vivaldi', sans-serif;
+	justify-content: center;
+	align-items: center;
+}
+
+.column-info p {
+	margin: 0.5em auto;
+	font-size: 15pt;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a button {
+	margin: 1em auto;
+	padding: 0.1em 1em;
+	border-radius: 2em;
+	background: transparent;
+	font-family: 'Century';
+	background: linear-gradient(90deg,
+	#835713 0%,
+	#b98939 25%,
+	#fed895 50%,
+	#aa8124 100%
+	);
+	border-color: #aa8124;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Vivaldi', sans-serif;
+	font-size: 15pt;
+}
+
+a:hover button {
+	cursor: pointer;	
+	border: none;
+}
+
+@media (max-width: 1024px) { 
+
+	.container {
+		margin: auto;
+		width: 90%;
+		min-height: 95vh;
+	}
+
+	/* ===== Card Back ===== */
+	
+	.column-info { 
+		margin: 0.5em auto;
+	}
+	
+	.column-info p {
+		margin: auto 1em;
+		font-size: 14pt;
+	}
+
+}
+
+@media (max-width: 768px) { 
+
+	.container {
+		margin: auto;
+		min-height: 100vh;
+	}
+	
+	
+	/* ===== Card Back ===== */
+	
+	.info {
+		flex-direction: row;
+	}
+	
+	.column-info p {
+		margin: auto 1em;
+		font-size: 12pt;
+	}
+
+}
+
+
+@media (max-width: 600px) {
+	
+	.container {
+		margin: auto;
+		width: 90%;
+		min-height: 100vh;
+	}	
+
+	.logo-item {
+		width: 30%;
+	}
+	
+	/* ===== Card Back ===== */
+	
+	
+	#convite-back {
+		padding: auto;
+		padding-top: 4em;
+		min-height: 100vh;
+		/*background-size: 100% 100%;*/
+	}
+	
+	#texto-back {
+		margin: 1em auto;
+		font-size: 13pt;
+	}
+		
+	.info {
+		flex-direction: column;
+	}
+	
+	.column-info p {
+		margin: auto 0.1em;
+		text-align: center;
+	}
+ 
+}
+
+@media (max-width: 480px) { 
+
+	.container {
+		margin: auto;
+		height: 100vh;
+	}
+	
+	.logo-item {
+		width: 20%;
+	}
+
+	/* ===== Card Back ===== */
+
+	#texto-back {
+		margin: 1em auto;
+		font-size: 11pt;
+	}
+	
+}
+
+@media (max-width: 320px) { 
+
+	.logo {
+		width: 100%;
+	}
+
+	.logo-item {
+		width: 15%;
+	}
+	
+}
