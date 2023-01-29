@@ -121,7 +121,7 @@ body {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-family:  'Edwardian Scr Alt ITC TT', sans-serif;
+	font-family: 'Edwardian Scr Alt ITC TT';
 }
 
 #title-institute {
@@ -131,7 +131,7 @@ body {
 
 #title-turma {
 	font-size: 35pt;
-        font-family:  'Edwardian Scr Alt ITC TT', sans-serif;
+        font-family: 'Edwardian Scr Alt ITC TT', sans-serif;
 }
 
 
